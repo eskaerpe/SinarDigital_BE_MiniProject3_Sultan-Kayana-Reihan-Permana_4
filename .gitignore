@@ -50,23 +50,11 @@ tmp/
 temp/
 *.tmp
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
 
 # Backup files
 *.bak
 *.backup
 
-# macOS
-.AppleDouble
-.LSOverride
-
 # Windows
 desktop.ini
 $RECYCLE.BIN/
-
-# Linux
-.directory
-.Trash-*
