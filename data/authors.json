@@ -1,0 +1,42 @@
+[
+	{
+		"name": "Bagas Putra",
+		"email": "bagas.putra@example.com",
+		"number": "123-456-7890"
+	},
+	{
+		"name": "Siti Aisyah",
+		"email": "siti.aisyah@example.com",
+		"number": "098-765-4321"
+	},
+	{
+		"name": "Rizky Hidayat",
+		"email": "rizky.hidayat@example.com",
+		"number": "555-123-4567"
+	},
+	{
+		"name": "Maya Sari",
+		"email": "maya.sari@example.com",
+		"number": "444-987-6543"
+	},
+	{
+		"name": "Andi Wijaya",
+		"email": "andi.wijaya@example.com",
+		"number": "333-222-1111"
+	},
+	{
+		"name": "Dimas Arvian",
+		"email": "dimas.arvian@example.com",
+		"number": "222-333-4444"
+	},
+	{
+		"name": "Siti Nur",
+		"email": "siti.nur@example.com",
+		"number": "777-888-9999"
+	},
+	{
+		"name": "Andi Pratama",
+		"email": "andi.pratama@example.com",
+		"number": "111-222-3333"
+	}
+]

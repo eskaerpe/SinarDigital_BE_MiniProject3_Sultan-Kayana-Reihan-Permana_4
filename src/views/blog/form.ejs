@@ -1,0 +1,46 @@
+<% const isEdit = mode === 'edit'; %>
+<div class="topbar">
+	<div>
+		<h1><%= isEdit ? 'Edit Post' : 'Create Post' %></h1>
+		<p class="muted">Upload gambar (opsional), pilih author, dan isi konten.</p>
+	</div>
+	<div class="actions">
+		<a class="btn secondary" href="/blog-view">← Back</a>
+	</div>
+</div>
+
+<form action="<%= isEdit ? `/blog-view/${post.id}/update` : '/blog-view' %>" method="POST" enctype="multipart/form-data">
+	<div class="form-group">
+		<label>Title</label>
+		<input name="title" value="<%= post?.title || '' %>" required />
+	</div>
+
+	<div class="form-group">
+		<label>Author</label>
+		<select name="authorId" required>
+			<option value="">-- pilih author --</option>
+			<% authors.forEach(a => { %>
+				<option value="<%= a.id %>" <%= post && post.authorId === a.id ? 'selected' : '' %>><%= a.name %></option>
+			<% }) %>
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label>Content</label>
+		<textarea name="content" required><%= post?.content || '' %></textarea>
+	</div>
+
+	<div class="form-group">
+		<label>Image (optional)</label>
+		<input type="file" name="image" accept="image/*" />
+		<% if (post?.imagePath) { %>
+			<div style="margin-top:8px;">
+				<img src="/<%= post.imagePath %>" alt="current" class="img-thumb" style="width:180px;height:120px;" />
+			</div>
+		<% } %>
+	</div>
+
+	<div class="actions" style="margin-top:12px;">
+		<button class="btn" type="submit"><%= isEdit ? 'Update' : 'Create' %></button>
+	</div>
+</form>

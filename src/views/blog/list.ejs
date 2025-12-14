@@ -1,0 +1,129 @@
+<div class="topbar">
+	<div>
+		<h1>Blog Posts</h1>
+		<p class="muted">Tabel + kartu, dengan gambar (jika ada).</p>
+	</div>
+	<div class="actions">
+		<a
+			class="btn"
+			href="/blog-view/new"
+			>+ New Post</a
+		>
+		<a
+			class="btn secondary"
+			href="/api/blog"
+			target="_blank"
+			>Lihat JSON</a
+		>
+	</div>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Image</th>
+			<th>Created</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% if (!posts || posts.length === 0) { %>
+		<tr>
+			<td colspan="6">No posts yet.</td>
+		</tr>
+		<% } else { %> <% posts.forEach((p, idx) => { %>
+		<tr>
+			<td><%= idx + 1 %></td>
+			<td>
+				<div>
+					<strong><%= p.title %></strong>
+					<div
+						class="muted"
+						style="max-width: 360px">
+						<%= p.content.slice(0,120) %>...
+					</div>
+				</div>
+			</td>
+			<td><span class="badge"><%= p.author?.name || '-' %></span></td>
+			<td>
+				<% if (p.imagePath) { %>
+				<img
+					src="/<%= p.imagePath %>"
+					alt="thumb"
+					class="img-thumb" />
+				<% } else { %>
+				<span class="muted">(no image)</span>
+				<% } %>
+			</td>
+			<td><span class="muted"><%= new Date(p.createdAt).toLocaleString() %></span></td>
+			<td class="actions">
+				<a
+					class="btn secondary"
+					href="/blog-view/<%= p.id %>/edit"
+					>Edit</a
+				>
+				<form
+					action="/blog-view/<%= p.id %>/delete"
+					method="POST"
+					style="display: inline"
+					onsubmit="return confirm('Delete this post?');">
+					<button
+						class="btn danger"
+						type="submit">
+						Delete
+					</button>
+				</form>
+			</td>
+		</tr>
+		<% }) %> <% } %>
+	</tbody>
+</table>
+
+<hr />
+<h3>Kartu</h3>
+<div class="grid">
+	<% (posts || []).forEach((p) => { %>
+	<div class="card-item">
+		<div
+			class="actions"
+			style="justify-content: space-between; align-items: center">
+			<div class="muted"><%= new Date(p.createdAt).toLocaleDateString() %></div>
+			<div class="actions">
+				<a
+					class="btn secondary"
+					href="/blog-view/<%= p.id %>/edit"
+					>Edit</a
+				>
+				<form
+					action="/blog-view/<%= p.id %>/delete"
+					method="POST"
+					style="display: inline"
+					onsubmit="return confirm('Delete this post?');">
+					<button
+						class="btn danger"
+						type="submit">
+						Delete
+					</button>
+				</form>
+			</div>
+		</div>
+		<h3 style="margin: 8px 0 6px"><%= p.title %></h3>
+		<div
+			class="muted"
+			style="margin-bottom: 6px">
+			By <%= p.author?.name || '-' %>
+		</div>
+		<% if (p.imagePath) { %>
+		<img
+			src="/<%= p.imagePath %>"
+			alt="thumb"
+			class="img-thumb"
+			style="width: 100%; height: 180px" />
+		<% } %>
+		<p style="margin-top: 8px; line-height: 1.5"><%= p.content.slice(0,220) %>...</p>
+	</div>
+	<% }) %>
+</div>

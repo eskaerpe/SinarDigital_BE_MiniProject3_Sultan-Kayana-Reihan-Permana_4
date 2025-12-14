@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"title": "Teknologi Hijau",
+		"author": "Dimas Arvian",
+		"content": "Perkembangan teknologi hijau semakin menarik perhatian karena mampu mengurangi dampak lingkungan sekaligus membuka peluang ekonomi baru. Inovasi seperti energi surya terjangkau, kendaraan listrik, dan rumah pintar hemat energi membuktikan bahwa keberlanjutan dapat berjalan selaras dengan kemajuan industri. Tantangannya kini terletak pada percepatan adopsi masyarakat dan kesiapan infrastruktur agar solusi ramah lingkungan dapat diterapkan secara massal dalam kehidupan sehari-hari."
+	},
+	{
+		"id": 2,
+		"title": "Kecerdasan Buatan dalam Kehidupan Sehari-hari",
+		"author": "Siti Nur",
+		"content": "Kecerdasan buatan (AI) telah menjadi bagian tak terpisahkan dari kehidupan modern, mempengaruhi berbagai aspek mulai dari asisten virtual hingga sistem rekomendasi di platform streaming. AI membantu meningkatkan efisiensi operasional di berbagai sektor, termasuk kesehatan, transportasi, dan layanan pelanggan. Namun, perkembangan pesat teknologi ini juga menimbulkan pertanyaan etis terkait privasi data, bias algoritma, dan dampak sosial jangka panjang yang perlu diatasi secara bijaksana."
+	},
+	{
+		"id": 3,
+		"title": "Peran Teknologi dalam Pendidikan Modern",
+		"author": "Andi Pratama",
+		"content": "Teknologi telah merevolusi cara kita mengakses dan menyampaikan pendidikan. Dengan adanya platform pembelajaran online, sumber daya digital, dan alat kolaboratif, proses belajar menjadi lebih fleksibel dan inklusif. Siswa kini dapat belajar sesuai kecepatan mereka sendiri dan mengakses materi dari mana saja di dunia. Namun, tantangan seperti kesenjangan digital dan kebutuhan akan pelatihan guru dalam penggunaan teknologi tetap harus diatasi untuk memastikan bahwa manfaat teknologi dapat dirasakan secara merata."
+	},
+	{
+		"id": 4,
+		"title": "Dampak Medsos terhadap Kesehatan Mental",
+		"author": "Siapa weh",
+		"content": "Media sosial telah mengubah cara kita berinteraksi dan berkomunikasi, namun dampaknya terhadap kesehatan mental menjadi perhatian serius. Penggunaan media sosial yang berlebihan dapat menyebabkan perasaan cemas, depresi, dan rendah diri akibat perbandingan sosial yang tidak realistis. Di sisi lain, media sosial juga dapat menjadi platform untuk dukungan sosial dan kesadaran akan isu-isu kesehatan mental. Penting bagi pengguna untuk mengelola waktu mereka di media sosial dengan bijak dan mencari keseimbangan antara dunia digital dan kehidupan nyata."
+	},
+	{
+		"id": 5,
+		"title": "Belajar Mandiri",
+		"author": "Bagas Putra",
+		"content": "Metode belajar mandiri semakin populer karena fleksibilitasnya memberi kesempatan bagi setiap orang untuk mengembangkan keterampilan sesuai kebutuhan pribadi. Akses ke kursus online, komunitas belajar, dan platform pendidikan memungkinkan siapa pun memperoleh kompetensi baru tanpa batas geografis atau usia. Tantangan sebenarnya muncul ketika disiplin diri dan konsistensi diuji, sehingga individu perlu mengatur strategi belajar yang realistis dan terukur."
+	}
+]
